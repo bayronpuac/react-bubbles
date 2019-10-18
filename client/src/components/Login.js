@@ -25,7 +25,7 @@ const Login = props => {
    .post('/login', userCredentials)
    .then(res => {
      localStorage.setItem('token', res.data.payload)
-     props.history.push('/bubblespage')
+     props.history.push('/bubbles')
    })
    .catch(err => console.log(err.response))
  }

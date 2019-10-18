@@ -12,7 +12,7 @@ function App() {
       <div className="App">
       <div>
           <Link to='/login'>Login</Link>
-          <Link to='/bubblespage'>Bubble Page</Link>
+          <Link to='/bubbles'>Bubble Page</Link>
         </div>
         <Route exact path="/" component={Login} />
         <Route path="/login" component={Login} />
@@ -20,7 +20,7 @@ function App() {
           Build a PrivateRoute component that will 
           display BubblePage when you're authenticated 
         */}
-      <PrivateRoute path="/bubblespage" component={BubblePage} />
+      <PrivateRoute path="/bubbles" component={BubblePage} />
       </div>
     </Router>
   );
