@@ -25,37 +25,40 @@ const Login = props => {
    .post('/login', userCredentials)
    .then(res => {
      localStorage.setItem('token', res.data.payload)
-     props.history.push('/friends')
+     props.history.push('/bubblespage')
    })
    .catch(err => console.log(err.response))
  }
   return (
     <>
-      <p>Welcome to the Bubble App!</p>
+    <div>
+      <h1>Welcome to the Bubble App!</h1>
       <p>Build a login page here</p>
-      <div>
-     <form onSubmit = {onSubmit}>
+    </div>
+    
+    <div>
+      <form onSubmit = {onSubmit}>
       
-      <input 
-      type = 'text' 
-      name= 'username' 
-      value = {userCredentials.username} 
-      onChange = {handleChange} 
-      placeholder = 'username'
-      />
+        <input 
+        type = 'text' 
+        name= 'username' 
+        value = {userCredentials.username} 
+        onChange = {handleChange} 
+        placeholder = 'username'
+        />
 
-      <input 
-      type = 'password' 
-      name = 'password' 
-      value = {userCredentials.password} 
-      onChange = {handleChange} 
-      placeholder = 'password'
-      />
+        <input 
+        type = 'password' 
+        name = 'password' 
+        value = {userCredentials.password} 
+        onChange = {handleChange} 
+        placeholder = 'password'
+        />
 
-      <button>Login</button>
+        <button>Login</button>
 
-     </form>
-   </div>
+      </form>
+     </div>
     </>
   );
 };
